@@ -11,6 +11,7 @@ function TodoItem({ todo, dispatch }) {
         />
 
         <span
+          className="fs-4"
           style={{ textDecoration: todo.complete ? "line-through" : "none" }}
         >
           {todo.text}
@@ -18,10 +19,10 @@ function TodoItem({ todo, dispatch }) {
       </div>
 
       <button
-        className="btn-danger me-4"
+        className="btn-danger rounded me-4"
         onClick={() => dispatch({ type: "delete", payload: { id: todo.id } })}
       >
-        X
+        <i class="fas fa-trash-alt"></i>
       </button>
     </div>
   );
